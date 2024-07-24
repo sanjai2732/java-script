@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: rgb(10, 10, 41);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            color: aliceblue;
+        }
+       section{
+        display: grid;
+        place-items: center;
+        align-content:center ;
+        min-height: 100vh;
+       }
+       .hidden{
+        opacity: 0;
+        transition: all 2s ;
+       }
+       .show{
+        opacity: 1;
+       }
+    </style>
+</head>
+<body>
+    <section class="hidden">
+        <h1>welcome the new world</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque totam aliquam voluptatibus eos quod nesciunt adipisci facilis soluta, recusandae reprehenderit ratione officia molestiae dicta nam nemo consequatur repudiandae dolores asperiores.</p>
+    </section>
+    <section class="hidden">
+        <h3>Hello</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, voluptatem optio! Debitis blanditiis odio eveniet laudantium eligendi minima dolorem ipsam corporis alias sunt. Impedit nostrum distinctio facere laborum! Cum, neque?
+        Dolor vero unde est placeat libero perferendis quibusdam modi tenetur expedita ad obcaecati adipisci, ratione ipsa accusantium laboriosam molestias? Atque labore necessitatibus eligendi veniam eum corporis reiciendis voluptatem omnis doloribus?
+        Accusantium, vel obcaecati? Voluptas aliquam, eos, ea itaque illo autem doloremque illum distinctio architecto pariatur impedit tempore aperiam exercitationem vitae accusamus libero dicta nulla temporibus quibusdam adipisci modi consectetur tenetur!
+        Quis magni ab, accusantium odio, facere, velit ut corporis officia beatae itaque hic. Saepe rem quaerat cupiditate explicabo. Deleniti, eaque sit iusto quam eius ipsum modi molestiae perspiciatis earum totam.</p>
+    </section>
+    <section class="hidden">
+        <h3>welcome the new world</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque totam aliquam voluptatibus eos quod nesciunt adipisci facilis soluta, recusandae reprehenderit ratione officia molestiae dicta nam nemo consequatur repudiandae dolores asperiores.</p>
+    </section>
+    <script>
+        const observer=new IntersectionObserver((entries)=>{
+            entries.forEach((entry)=>{
+                console.log(entry)
+                if(entry.isIntersecting){
+                    entry.target.classList.add('show')
+                }else{
+                    entry.target.classList.remove('show')
+                }
+
+            })
+        })
+        const hiddenElements=document.querySelectorAll(".hidden");
+        hiddenElements.forEach((el)=>observer.observe(el));
+    </script>
+</body>
+</html>

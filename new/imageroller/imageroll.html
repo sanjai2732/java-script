@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cir{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(152, 152, 152);
+            border-radius: 50%;
+            position: relative;
+            transition: all 0.5s;
+        }
+        .cir::after{
+            position: absolute;
+            content: '';
+            width: 10px;
+            background-color: black;
+            height: 50px;
+            right: 0;
+            transform: rotate(60deg);
+            margin: 70px;
+            
+
+        }
+        .cir::before{
+            position: absolute;
+            content: '';
+            width: 10px;
+            background-color: black;
+            height: 50px;
+            top: 0;
+            left: 0;
+            transform:rotate(120deg);
+            margin: 90px;
+            
+        }
+        .cir:hover{
+            width: 300px;
+            height: 200px;
+            background-color: black;
+            border-radius: 1%;
+            transform:translateX(-100px);
+        
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="cir">
+    </div>
+    
+    
+</body>
+</html>

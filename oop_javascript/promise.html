@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //promise like help to your friend, help done="resolve" and help is not done "reject"
+        //promise a object is return a function "resolve and reject"
+        //promise using in asychronous 
+        // let booking=new Promise((resolve,reject)=>{
+        //     let bookingSuccess=true
+        //     if(bookingSuccess){//Method defind
+        //         resolve()
+        //     }
+        //     else{
+        //         reject()
+        //     }
+        // })
+        // booking.then(booked)//resolve received using ".than" and declare the function "booked"
+        // .catch(failed)//reject received using ".catch" and declare the function "failed"
+        // function booked(){
+        //     console.log("booking success")
+        // }
+        // function failed(){
+        //     console.log("booking is failed")
+        // }
+        //--------------------------------------------------------------------------------------------------
+        // function busBooking(){
+        //     return new Promise((resolve,reject)=>{
+        //         let bus=false
+        //         if(bus){
+        //             resolve(100)
+        //         }
+        //         else{
+        //             reject(100)
+        //         }
+        //     })
+        // }
+        // busBooking().then((amount)=>{
+        //     console.log(`Booking Success ,You will send the booking amount Rs:${amount}`)
+        // })
+        // .then((amount)=>{
+        //     console.log(`${amount}`)
+        // })
+        // .catch((amount)=>{
+        //     console.log("Booking is failed",amount)
+        // })
+        //------------------------------------------------------------------------------------
+        //heads and tails using  promise
+        // function coinToss(){
+        //     return new Promise((resolve,reject)=>{
+        //         let rade=Math.floor(Math.random()*2)
+        //         if(rade==1){
+        //             resolve()
+        //         }
+        //         else{
+        //             reject()
+        //         }
+        //     })
+        // }
+        // coinToss().then(()=>{
+        //         console.log("'Heads'")
+        //     })
+        //     .catch(()=>{
+        //         console.log("'Tails'")
+        //     })
+        //-----------------------------------------------------------
+        //promise methods padding,resolve,reject
+        let friend1=new Promise((resolve,reject)=>{
+            const reached=true
+            if(reached){
+                setTimeout(resolve,3000,"sanjai is reached")//3000 3s is setTimeout  resolve agreement is "sanjai is reached"
+            }
+            else{
+                reject("sanjai is not reached")
+            }
+        })
+        let friend2=new Promise((resolve,reject)=>{
+            const reached=true
+            if(reached){
+                setTimeout(resolve,2000,"Ram is reached")
+            }
+            else{
+                reject("Ram is not reached")
+            }
+        })
+        let friend3=new Promise((resolve,reject)=>{
+            const reached=false
+            if(reached){
+                setTimeout(resolve,1000,"Guru is reached")
+            }
+            else{
+                reject("Guru is not reached")
+            }
+        })
+        //promise.all(): the "all promises" are 'ture' it give "resolve" ,but "only one" promise is 'false' it give "reject", it is give the 'Array'
+        Promise.all([friend1,friend2,friend3]) 
+        .then((message)=>console.log(message))
+        .catch((message)=>console.log(message))
+        //------------------------------------------------
+        //Promise.allSettled():it is give 'object' inside "status,value" status are two 1.status:'fulfilled' it is resolved,2.status:'rejected' it is rejected the input than value:"sanjai is reached or not"
+        Promise.allSettled([friend1,friend2,friend3]) 
+        .then((message)=>console.log(message))
+        .catch((message)=>console.log(message))
+        //-------------------------------------------------------
+        //promise.race(): only reject first priority is 'setTimeout' value 
+        Promise.race([friend1,friend2,friend3]) 
+        .then((message)=>console.log(message))
+        .catch((message)=>console.log(message))
+        //----------------------------------------------------
+        //Promise.any():only resolve first priority is 'setTimeout' value 
+        Promise.any([friend1,friend2,friend3]) 
+        .then((message)=>console.log(message))
+        .catch((message)=>console.log(message))
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            height: 100vh;
+            width: 100vw;
+            place-items: center;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            transition: all 0.5s ease;
+            animation:sq 1s ease-in-out  1 both;
+
+        }
+        .color{
+          
+            background-color: black;
+            border-radius: 50%;
+            border: 4px solid brown;
+            animation:box 5s ease-in-out 1s 1 both;
+        }
+        button{
+            margin-top: 10px;
+        }
+        #color{
+            text-transform: uppercase;
+            color: yellow;
+        }
+    @keyframes box {
+        0%{
+            transform: translateX(0px);
+        }
+        25%{
+            background-color: rgb(255, 0, 0);
+            border-color:yellow;
+            transform: translateX(-200px);
+
+        }
+        50%{
+            
+            transform: translateX(200px);
+        }
+        100%{
+            transform:rotate(360deg) translateX(0);
+        }
+        
+    }
+    /* @keyframes sq {
+        0%{
+            transform: scale(0.5);
+        }
+        25%{
+            
+            transform: scale(2);
+
+        }
+        50%{
+            
+            transform: scale(0.5);
+        }
+        100%{
+            transform:scale(1);
+        }
+        
+    } */
+     #ok{
+        width: 200px;
+            height: 200px;
+            background-color: rgb(255, 0, 195);
+            transition: all 0.5s ease;
+            animation:sq 1s ease-in-out  1 both;
+
+     }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+        </div>
+        <button id="btn">click</button>
+        <section>
+            <p value="default" id="p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil ut ducimus asperiores distinctio, exercitationem quia quod porro voluptatibus earum id hic optio cupiditate omnis? Maxime obcaecati minima temporibus tempora sunt?</p>
+        </section>
+    </div>
+    <script>
+        // document.getElementById('btn').addEventListener("click",()=>{
+        //    let el= document.querySelector(".box")
+        //    el.classList.toggle("color")              //toggle
+        // })
+        //--------------------------------------------------------------------------
+        // document.getElementById('btn').addEventListener('click',()=>{
+        //     let el=document.querySelector(".box")
+        //     el.classList.remove("box");          //remove
+        //     let input=document.createElement('div')
+        //     input.id='ok'
+        //     document.querySelector('.container').appendChild(input)
+
+        // })
+        document.getElementById('btn').addEventListener('click',()=>{
+            let p=document.getElementById('p')
+            p.setAttribute("style","color:yellow;")
+           let line= p.getAttribute('value'); 
+           console.log(line)
+        })
+    </script>
+</body>
+</html>

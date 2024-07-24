@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>celsius to fahren</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3 id="heading">celsius to fahren</h3>
+        <input type="text" id="input" placeholder="enter the number">
+        <div class="btn">
+            <button  type="submit" onclick="convert()">convert</button>
+        </div>
+        <div id="result">
+        </div>
+    </div>
+
+    <script>
+        function convert(){
+            const celval=Number(document.getElementById("input").value)
+            const fahrenval=(9/5)*celval+32
+            const result=document.getElementById("result")
+            result.innerHTML=fahrenval+"faher"
+        }
+    </script>
+    
+</body>
+</html>

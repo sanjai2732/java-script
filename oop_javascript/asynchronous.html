@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+     <script>
+        
+        //Asychronous is not blockable code 
+        //There are steps to excusting all function ,
+        //------Data structure---------
+        //"1.stack (LIFO) 
+        //2.browser using assign the asynch setTimeout and
+        // 3.queue"
+        //first excuste the globel function,than excuste Asychronous funtion is "setTimeout"
+        console.log("...hello");
+        let a=10,b=20;  //globel variable 
+        console.log(a+b)//globel variable 
+        setTimeout(()=>console.log("step 1"),1000) //asyn setTime "ms"
+        setTimeout(()=>console.log("step 2"),5000)
+        setTimeout(()=>console.log("step 3"),2000)
+        console.log("bye")//globel variable 
+        //setInterval is asynch method infinit time is excute the in team of "1000 ms"
+        // setInterval(() => {
+        //     console.log("h")
+        // }, 1000);
+        //this also asychronous 
+        let A= document.querySelector("body")
+        A.addEventListener("click",()=>{
+        console.log("offline")
+       })
+     </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //array
+        let names=[`sanjai`,`Ram`,`Guru`] 
+        let a=[1,2,3,4,5]
+        console.log(names[1])
+
+        // last element find
+        console.log(names.length-1)
+
+        //2d array
+        let matrix=[[1,2,3],[4,5,6],[8,9,10]]
+        console.log(matrix[1][0])
+
+        //push pop shift unshift splice 
+       console.log( a.pop())
+       console.log(a)
+
+       console.log( a.push(7))
+       console.log(a)
+
+       console.log( a.shift())
+       console.log(a)
+
+       console.log( a.unshift(8))//return length
+       console.log(a)
+
+       console.log( a.splice(0,1)) //return array
+       console.log(a)
+
+       console.log( a.splice(0,3,"x","y","z")) //return deleted array
+       console.log(a)
+
+       let b=["a","b","c","d"]
+       console.log(b.slice(1,2))
+       console.log(b)
+
+       let joint=b.join()
+       console.log(joint)
+
+       console.log(joint.split(","))
+
+       //concat and spread
+        let a1=[1,2,3,4,5]
+        let a2=[1,2,3,4,5]
+        console.log(a1.concat(a2))
+
+
+        console.log(...a1,...a2)
+        a1=[...a1,...a2]
+        console.log(a1)
+        
+        //exercise
+        let Arr=[5,8,10,7,9,11]
+        let replace=Arr.splice(3,5,17,19,111)
+        console.log(replace) //return
+        console.log(Arr)
+
+       
+        console.log(Arr.unshift(100)) //return  totel length
+        console.log(Arr)
+
+        console.log(Arr.splice(Arr.length-1,0,200)) //return  totel length
+        console.log(Arr)
+
+        console.log(Arr.push(1000))
+        console.log(Arr)
+
+        console.log(Arr.splice(Math.round(Arr.length/2),0,0))
+        console.log(Arr)
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="fst">
+    <input type="text" id="sec">
+    <button onclick="add()">add</button>
+    <div id="result"></div>
+    <script>
+        function add(){
+            let first=Number(document.getElementById('fst').value)
+            let sec=Number(document.getElementById('sec').value)
+            let result=document.getElementById('result')
+            result.innerHTML=first+sec
+        }
+
+    </script>
+</body>
+</html>

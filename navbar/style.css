@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    /*bg color*/
+    --bg:rgb(10, 11, 59);
+    --ft-color:aliceblue;
+    --ft-highlight-color:rgb(122, 25, 226);
+    --btn-color:yellow;
+    --ft-btn-color:rgb(2, 3, 51);
+}
+body{
+    max-width: 100%;
+    max-height:100vh;
+    background-color: var(--bg);
+}
+
+header{
+    z-index: 1000;
+    margin:30px 10px 0px 10px;
+    width: 100%;
+    display: flex;
+    height: 30px;
+    padding: 20px;
+
+}
+
+header,nav,ul{
+    display: flex;
+    height: 30px;
+    align-items: center;
+    justify-content: end;
+    list-style: none;
+}
+#logo{
+    font-size: x-large;
+    font-weight: 900;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    color:var(--ft-color);
+      
+}
+
+a{
+    color:var(--ft-color);
+    padding-right: 20px;
+    
+}
+#login-btn{
+    all: unset;
+    width: 100px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50px;
+    padding: 0px 5px;
+    cursor: pointer;
+    background-color: var(--btn-color);
+    color: var(--ft-btn-color);
+    display: grid;
+    place-items: center;
+    
+
+}
+a:hover{
+    color:var(--btn-color) ;
+}
+#login-btn:hover{
+    box-shadow: 0px 0px 5px var(--btn-color);
+}
+/*---------------hero------------------*/
+#hero{
+    width: 100vw;
+    height: 1080px;
+    display: flex;
+    
+    /* border: 1px solid red; */
+}
+/*----------Hero---------------*/
+.left-container{
+    /* border:1px solid red; */
+    position: absolute;
+    max-width: 60%;
+    height: 100%;
+    margin: 150px 0px 0px 40px;
+
+}
+#welcome{
+    font-size: 60px;
+    color: var(--ft-color);
+}
+#designs{
+    color: var(--ft-highlight-color);
+    max-width: 70%;
+    font-size: 60px;
+    
+}
+b{
+    color: aliceblue;
+    padding-right: 5px;
+
+}
+
+#desription{
+    margin-top: 15px;
+    color: var(--ft-color);
+}
+#desription::selection{
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+}
+/*-----------main button------------*/
+#btn{
+    margin-top: 40px;
+}
+#mainBtn{
+    all: unset;
+    background-color: var(--btn-color);
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 20px;
+    margin-right: 20px ;
+    
+}
+#playBtn{
+    all: unset;
+    border: 1px solid var(--ft-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    color: var(--ft-color);
+    margin-top: 10px;
+    position: relative;
+}
+
+#mainBtn:hover,#playBtn:hover{
+    box-shadow: 0px 0px 10px var(--btn-color);
+    cursor: pointer;
+    transform: scale(1.2);
+}
+/*--------------------rigth container------------*/
+
+.rigth-container{
+    position:absolute;
+    width: 30%;
+    height: 100%;
+    /* border: 1px solid red; */
+    right: 0;
+    margin: 100px 20px 0px 30px;
+    animation: box  0.5s ease-in;
+}
+#img_1{
+    border-radius: 20px;
+    width: 400px;
+    height: 350px;
+    background: url(Artboard\ 1@1x_1-1.jpg)  no-repeat center ;
+    background-size:cover;
+    position: relative;
+    transition: all 0.5s linear;
+    
+    
+}
+#img_2{
+    width: 300px;
+    height: 250px;
+    transform: translate(130px,-100px);
+    background: url(untitled.png)  no-repeat center ;
+    background-size:cover;
+    position: relative;
+    border-radius: 20px;
+    transition: all 0.5s linear;
+    
+}
+#img_1:hover,#img_2:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px var(--btn-color);
+}
+#img_3{
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    border: 2px solid var(--ft-color);
+    top: 0;
+    right: 0;
+    margin-top: 200px;
+    transform: translate(-300px,0);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    backdrop-filter: blur(5px) saturate(120%);
+    color: var(--ft-color);
+    padding: 5px 5px 5px 2px;
+    
+}
+#img_3::before{
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius:100%;
+    border: 2px solid burlywood;
+    
+}
+.sidebar{
+    z-index: 9999;
+    position: absolute;
+    background-color: #ffffff;
+    width: 300px;
+    padding: 30px;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.sideLink{
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.sideLink:hover{
+    color:  rgb(0, 0, 0);
+    
+}
+.li{
+    width: 100%;
+    height: 30px;
+    border-radius:5px;
+    
+
+}
+.li:nth-child(1){
+    width: 100%;
+    height: 30px;
+    border-radius:5px;
+    background-color: var(--btn-color);
+    
+
+}
+.li:hover{
+    background-color:var(--btn-color);
+    box-shadow: 0px 2px 3px black; 
+}
+/*-------------menu-----------*/
+#menu_icon{
+    position:fixed;
+    padding: 5px 10px;
+    font-size: 20px;
+    right: 0;
+    z-index: 2000;
+}
+
+
+
+
+@keyframes box{
+    from{
+        transform: translate(200px);
+    }
+    to{
+        transform:translate(0px) ;
+    }
+    
+}
+
+@media (width>700px) {
+    .sidebar{
+       display: none;
+   } 
+   #menu{
+       all: unset;
+   }
+   #menu_icon{
+    display: none;
+   }
+   
+}
+@media (width<700px) {
+    #login-btn{
+        font-size: small;
+        font-weight: 700;
+        
+    }
+    .nav{
+        display: none;
+    }
+     #img_3{
+        display: none;
+     }
+     #login-btn{
+        display: none;
+     }
+     .sidebar{
+        right: 0;
+        display: none;
+    } 
+  
+    
+    
+}

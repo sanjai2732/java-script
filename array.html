@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //arrays
+        let names=[`sanjai`,`guru`,`kumars`]
+        console.log(names)
+
+        //push and pop  back of the array 
+        console.log(names.push("sa"))//return length of arrays 
+        console.log(names)
+        console.log(names.pop()) //return pop  value is last of arrays
+        
+        //shift and unshift  front of the array
+
+        console.log(names.shift())///return the shifted value in the  front of arrary
+        console.log(names)
+        console.log(names.unshift("sanjai"))//return length of arrays 
+        console.log(names)
+
+        //splice is all of push,pop,shift and unshift
+        //1.start index 
+        // 2.Index deleted
+        //3.insert the value
+
+        let val=[1,2,3,4,5]
+        console.log(val)
+        console.log(val.splice(1,1))
+        console.log(val)              //return deleted value
+        console.log(val.splice(1,0,'s','d'))
+        console.log(val)
+
+
+        //reverse 
+        let arr=[10,20,30]
+        console.log(arr.reverse())//return also same
+
+        //join is used to convert array to string
+
+        console.log(arr.join()) //return also same
+ 
+        //split is used to convert string to array
+
+        let str="1,2,3,4,5"
+        console.log(str.split(","))
+
+        //conacat and spreat operator
+        let arr1=[1,2,3,4,5]
+        let arr2=[6,7,8,9,0]
+        console.log(arr1 +","+ arr2)  //convert string
+        console.log(arr1.concat(arr2))//convert to array join
+        console.log([...arr1,...arr2])//it also same
+
+
+        //Exercise
+
+        let Arr=[5,8,10,7,9,11]
+        //replace 7,9,11 with 17,19,111 useing splice
+        console.log(Arr.splice(3,5,17,19,111))
+        console.log(Arr)
+
+        // insert 100 in front of the array using unshift
+
+        let unshift=Arr.unshift(100) 
+        console.log(Arr)
+
+        //insert 200 in last but one position
+
+        let l=Arr.length-1
+        let splice1=Arr.splice(l,0,200)
+        console.log(Arr)
+
+        //Add 1000 at the end
+        let push=Arr.push(1000)
+        console.log(Arr)
+
+        //Insert 0 in the middle.use arr.length to find middle position.
+        let length=Arr.length
+        let d=Math.round(length/2)
+        let splice=Arr.splice(d,0,0)
+        console.log(Arr)
+
+
+
+
+    </script>
+</body>
+</html>

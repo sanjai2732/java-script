@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+</body>
+<script>
+    //function
+    function get(n){//parameter
+        return n<0  
+    }
+    console.log(get(2))//argument
+    console.log(get)
+
+    add(20,20)//only hoisting works function declaration 
+    function add(a,b){
+       console.log( a+b)    
+    }
+    add(20,20)
+
+    //default
+    function name(na='there'){
+       console.log('Hi '+ na)  
+    }
+    name('sanjai')
+    name()//default
+    //------------------------------------------------------------
+
+    //recursion function
+    //factorial
+    function fac(n){
+        if(n==1)
+        return 1
+
+        return n*fac(n-1)
+    }
+    console.log(fac(5))
+
+    //function expression
+    //console.log(iteam(20)) function expression not hoisting
+    let iteam=function ok(n){
+        return n*5
+    }
+    console.log(iteam(20))
+
+
+    let arr=[1,2,34,5,52]
+    let findadd=function(arr){
+        let sum=1
+        for(let va of arr){
+            sum=sum*va
+        }
+        return sum
+    }
+    console.log(findadd(arr))
+    //------------------------------------------------------------
+
+    //arrow function
+    // let volume=function(l,b,h){
+    //     return l*b*h
+    // }
+    // console.log(volume(20,20,20))
+    // expression function ,  parameter , arrow symbol,function code
+    let volume   =(l,b,h) =>{return l*b*h}
+    console.log(volume(20,20,20))
+
+    //arrow function
+    let array=[1,2,3,4,5]
+    let mul=(array)=>{
+        let m=1;
+        for(let arr of array){
+            m*=arr
+        }
+        return m
+    }
+    console.log(mul(array))
+    
+    //arrow function 
+    let iteam1={
+        mobile:'i phone',
+        prise:100000,
+        display:'FHD'
+    }
+    let buy=(iteam1) =>{
+        for(let phone in iteam1){
+            console.log(phone)
+        }
+    }
+
+    console.log(buy(iteam1))
+    console.clear()
+    let areaOfcircle=r =>{return Math.PI*(r*r)}
+    console.log(Math.round(areaOfcircle(2)))
+
+    let ff=n=>{
+        if(n==1)
+        return 1
+    return n*ff(n-1)
+    }
+    console.log(ff(5))
+
+    let nam=(n='there')=>{
+        return "hi "+n
+    }
+    console.log(nam('sanjai'))
+    console.log(nam())
+//------------------------------------------------------------
+    //rest parameter
+   let rest=(...arg)=>{
+    let m=1
+    for(let i of arg){
+        m*=i  
+    }
+    return m
+   }
+   console.log(rest(1,2))
+   //------------------------------------------------------------
+   //arguments parameter work in declaration function
+   let par=function()
+   {
+    let result=1;
+    // console.log(arguments)
+    for(i=0;i<arguments.length;i++){
+        result+=arguments[i]
+    }
+    return result
+   }
+
+   console.log(par(1,2,3,4))
+
+//------------------------------------------------------------
+   console.log("generators")
+   //generators - generates value one by one
+   function* indexGenertor(){
+    let index=1
+    while(true){
+        yield index++
+    }
+   }
+   const gen=indexGenertor()
+   console.log(gen.next().value)
+   console.log(gen.next().value)
+   console.log(gen.next().value)
+
+   //-----------------------------------------
+   //example
+   function* generatorsNumber_101(){
+    let result=100;
+    while(true)
+    yield result++
+   }
+   const gent=generatorsNumber_101();
+   console.log(gent.next().value)
+   console.log(gent.next().value)
+   console.log(gent.next().value)
+   let four=gent.next().value
+   console.log(four*3)
+//-------------------------------------------------------------
+   //callback function to function call 
+   console.log("callback")
+
+   function greet_P(name){
+    console.log("Hi",name)
+   }
+
+   function greet_heading(name){
+    const head=document.querySelector('h1')
+    head.innerHTML="Hi "+name
+   }
+   function greet(callback){ //any name using the parameter
+    console.log(callback)
+    callback('ram');
+   }
+
+   greet(greet_heading)
+   greet(greet_P)
+
+   
+   greet(name=>{
+    const head=document.querySelector('h1')
+    head.innerHTML="Hi "+name
+   })
+   //-------------------------------------------------------------
+   //foreach method
+   let arr1=["sanjai","guru","ram","naren"]
+   arr1.forEach(print=>{
+    if("sanjai"=="sanjai"){
+    console.log(print.toUpperCase())
+    }
+    else{
+        // console.log(print.toUpperCase())
+
+    }
+
+   })
+
+//    function print(name){
+//     console.log(name)
+//    }
+//------------------------------------------------------
+
+let forec=[1,2,3,4,1,10]
+forec.forEach(print=>{
+    console.log(print)
+})
+
+for(let val of forec){
+    console.log(val)
+}
+console.clear()
+//-----------------------------------------------------
+let arr2=['sanjai','guru','naren']
+arr2.forEach((val,index,arr)=>{
+    arr2[index]=val.toUpperCase()
+    
+}
+)
+console.log(arr2)
+
+
+
+   
+
+
+
+
+</script>
+</html>

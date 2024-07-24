@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cm to inch converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3 id="heading">data finder</h3>
+
+        <select name="selector" id="input">
+            <option value="sanjai">Sanjai</option>
+            <option value="ram">ram</option>
+            <option value="Guru">Guru</option>
+        </select>
+        
+        <div class="btn">
+            <button  type="submit" id="btn">find</button>
+        </div>
+    </div>
+
+    <script>
+        //sanjai
+        //I am sanjai , reg no:936067 , dept:"ece"
+
+        //ram
+        // I am ram , reg no:936060 , dept:"cse"
+
+        //guru
+        //I am  Guru, reg no:936050 , dept:"civil"
+        const btn=document.querySelector('button')
+        btn.addEventListener('click',find)
+        let resultdiv=document.createElement('div')
+        resultdiv.id='result'
+        document.querySelector(".container").appendChild(resultdiv)
+
+        function find(){
+            const input=document.getElementById('input')
+            const name=input.options[input.selectedIndex].value
+            let studentName='',redNo=0, dept=''
+            
+            switch(name){
+                case "sanjai":
+                studentName="sanjai"
+                redNo=936067;
+                dept='ece'
+                break
+                case 'ram':
+                studentName='ram'
+                redNo=936060;
+                dept='cse'
+                break
+                case 'Guru':
+                studentName='Guru'
+                redNo=936050;
+                dept='civil'
+                break      
+            }
+            let contant=`I am  ${studentName}, reg no:${redNo} , dept:"${dept}"`
+            let result=document.getElementById('result')
+            result.innerHTML=contant
+
+        }
+
+        
+    </script>
+    
+</body>
+</html>

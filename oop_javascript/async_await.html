@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //async and await
+        //await using in function definitely The function start with "async"
+        //another method of "promise"
+        let A=new Promise((resolve,reject)=>{
+            const reachted=false
+            if(reachted){
+                setTimeout(resolve,3000,"sanjai reached")
+            }
+            else{
+                reject("sanjai is not reached")
+            }
+        })
+        
+        async function asyncstatus(){//micro queue
+            try{
+                console.log("........hi")
+                res=await A
+                console.log(res)
+                console.log("bye")
+            }
+            catch(err){
+                console.log(err)
+            }
+        }
+        asyncstatus()
+        
+    </script>
+</body>
+</html>

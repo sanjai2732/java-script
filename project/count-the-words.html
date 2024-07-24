@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count the words</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3 id="heading">Type a sentance</h3>
+        <textarea name="" id="value" cols="30" rows="10"></textarea>
+        <div class="btn">
+            <button  type="submit" onclick="convert()">calculate words</button>
+        </div>
+        <div id="result"></div>
+        <!--<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque nam in mollitia, aliquam labore rem officia. Quas illum exercitationem, quia ex dolor repellendus delectus magnam quam nobis consectetur esse ipsam.</p>-->
+        
+        
+        <script>
+            function convert(){
+                const input=document.getElementById("value").value
+                const trim=input.trim()
+                const split=trim.split(" ")//convert to array
+                const arr=split.length
+                const result=document.getElementById('result')
+                result.innerHTML=arr+"Words"
+            }
+
+        </script>
+    
+    </div>

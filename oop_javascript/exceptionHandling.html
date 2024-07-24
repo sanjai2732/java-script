@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Exception Handling 
+        //"try block" some of the user give the invalide input "try handly" inside "try block write the conditions.
+        //inside the condition block it is "Throw the error message"
+        // the error message is "catched in outside try block " catch is through the error message 
+        //finally it is all way execute the output
+        try{
+             num=prompt("enter a number")
+            if(num===''){
+                 throw "cannot be empty"
+            }
+            if(isNaN(num)){
+                throw "This is not a number"
+            }
+            console.log(num**2)
+        }
+        catch(message){
+            console.log(message)
+        }
+        finally{
+            console.log("bye")
+        }
+    </script>
+</body>
+</html>202

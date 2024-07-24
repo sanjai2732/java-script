@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cm to inch converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3 id="heading">data finder</h3>
+        <input type="text" name="" id="input" placeholder="enter number">
+    </div>
+
+    <script>
+        //button creation
+        const btn=document.createElement('button')
+        btn.id='btn'
+        btn.style.color='red';
+        document.querySelector('.container').appendChild(btn)
+        btn.innerHTML="find"
+
+        //add result tag
+        const result=document.createElement('div')
+        result.id='result'
+        result.style.transform="rotate(10deg)"
+        document.querySelector('.container').appendChild(result)
+
+        btn.addEventListener('click',find)
+
+        function find(){
+            const input=document.getElementById('input').value
+            const operand=input.split(/[+\-\*\/]/)
+            const operator=input.match(/[+\-\*\/]/)
+            let ans;
+            switch (operator[0]){
+                case '+':
+                    ans=parseFloat(operand[0])+parseFloat(operand[1])
+                    break
+                case '-':
+                    ans=parseFloat(operand[0])-parseFloat(operand[1])
+                    break
+                case '*':
+                    ans=parseFloat(operand[0])*parseFloat(operand[1])
+                    break
+                case '/':
+                    ans=parseFloat(operand[0])/parseFloat(operand[1])
+                    break   
+            }
+            const result=document.getElementById('result')
+            result.innerHTML=ans
+
+        }
+
+
+        
+    </script>
+    
+</body>
+</html>

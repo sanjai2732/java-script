@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: aliceblue;
+        }
+        .container{
+            width: 300px;
+            height: 350px;
+            border-radius: 20px;
+            border: 1px solid white;
+            background-color:#0001;
+            backdrop-filter: blur(20px);
+            padding: 20px;
+            display:flex;
+            flex-direction: column;
+
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(red, blue);
+        }
+        h1{
+            margin-top: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input{
+            margin-top: 5px;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            outline: none;
+            border-radius: 5px;
+            border:transparent ;
+            color: black;
+
+        }
+        label{
+            font-size: 18px;
+        }
+        button{
+            margin-top: 30px;
+            padding:5px 10px;
+            color: black;
+            cursor: pointer;
+            outline: none;
+            border-radius: 5px;
+            border:transparent ;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>login</h1>
+        <div>
+            <label >Name</label><br>
+            <input type="text" placeholder="Enter name">
+        </div>
+        <div>
+            <label >Password</label><br>
+            <input type="password" placeholder="Enter Password">
+        </div>
+        <button>Login</button>
+    </div>
+    
+</body>
+</html>

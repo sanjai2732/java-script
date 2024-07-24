@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery{
+            height: 500px;
+            width: 100%;
+            display: flex;
+            gap: 1rem;
+            margin-top: 200px; 
+           
+        }
+        .gallery > div{
+            flex: 1;
+            transition: all 1s;
+        }
+        .gallery > div:nth-child(1){
+            background: url("assortment-with-minimal-tumbler-drinks.jpg");
+            background-position: center;
+            background-size: cover;
+           
+        }
+        .gallery > div:nth-child(2){
+            background: url(32-Mahatma-Gandhi-PNG-image-collection-for-free-download-hcaLrTUbtayP3M.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .gallery > div:nth-child(3){
+            background: url("assortment-with-minimal-tumbler-drinks.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        .gallery>div:hover{
+            flex: 5;
+            transition: all 1s;
+            box-shadow: 0px 0px 100px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

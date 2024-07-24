@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    //loops  for , while, do while
+    
+    // let i    //globel delcare
+    // for(i=1;i<5;i++){
+    //     console.log(i)
+    // }
+
+    // i=0
+    // while(i<5){
+    //     console.log(i)
+    //     i++;
+
+    // }
+
+// i=10
+// do{
+//     console.log(i)
+//     i--;
+// }while(i>=1)
+
+
+//break in loop 
+//   while(true){
+//     let num=Number(prompt('enter the number'))
+//     if(!isNaN(num))
+//     break;
+//   }
+  
+//continue -skips the current iteration
+
+// let i;
+// for(i=0;i<5;i++){
+//     if(i%2==0){
+//         continue
+//     }
+//     console.log(i)
+// }
+
+
+
+//for of using array
+
+let arr=['sanjai','guru','kumar']
+for(i=0;i<arr.length;i++){
+    console.log(arr[i].toUpperCase())
+}
+
+for(let name of arr){
+    console.log(name)
+}
+
+//for in using  object
+
+let item={
+    phone:1000,
+    laptop:2000,
+    watch:10
+}
+for(let object in item){
+    console.log(item[object]) //collate the value of the item
+}
+
+
+
+</script>
+
+
+</body>
+</html>

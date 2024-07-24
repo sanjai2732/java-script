@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 250px;
+            height: 300px;
+            background-color: aliceblue;
+            padding: 20px;
+            border-radius: 20px;
+  
+        }
+        body{
+           height: 100vh;
+           width: 100vw;
+           background-color: rgb(89, 97, 211);
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           
+        }
+        h3{
+            margin-top: 10px;
+            text-align: center;
+            color: rgb(89, 97, 211);;
+        }
+        #card-1{
+            margin-top: 10px ;
+            padding:5px;
+        }
+        input{
+            margin-top: 10px;
+        }
+        button{
+            margin-top: 10px;
+            margin-left: 70px;
+            padding: 5px 10px;
+        }
+        #result{
+            margin-top: 5px;
+            text-align: center;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3 id="heading">Radio Button</h3>
+        <label><input type="radio" name="eduction" value="Illiterate">Illiterate</label><br>
+        <label><input type="radio" name="eduction" value="HighSchool">HighSchool</label><br>
+        <label><input type="radio" name="eduction" value="PG">PG</label><br>
+        <label><input type="radio" name="eduction" value="UG">UG</label><br>
+        <label><input type="radio" name="eduction" value="Doctorate">Doctorate</label><br>
+        <button id="button" type="button">click</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+    let button=document.querySelector("button")
+    button.addEventListener("click",click) 
+    function click(){
+        let selectedEduction=document.querySelector('input[name="eduction"]:checked')//selected the value
+       // console.log(selectedEduction)
+       let result;
+       if(selectedEduction){
+        switch(selectedEduction.value){
+            case "HighSchool":
+            case "UG":
+            result="Congratulation! You are eligible for the job."
+            break;
+            default:
+            result="Sorry, You are not eligible for the job."
+            break;
+        }
+       }
+       else{
+        result="Please select an eductional qualification."
+       }
+
+       const output=document.getElementById("result")
+       output.innerHTML=result
+    }
+      
+        
+    </script>
+
+
+    
+ 
+</body>
+</html>

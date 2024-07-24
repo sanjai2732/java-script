@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <h3>login from</h3>
+        <label for="name"><input id="name" type="text" placeholder=" name"></label><br>
+        <label for="email"><input id="email" type="email" placeholder="email"></label><br>
+        <label for="password"><input id="password" type="password" placeholder="creater password"></label><br>
+        <label for="confirm password"><input id="confirm" type="password" placeholder="confirm password"></label><br>
+        <button onclick="ok()">login</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function ok(){
+            const user={
+            name     : document.getElementById("name").value,
+            email    : document.getElementById("email").value,
+            password : document.getElementById("password").value,
+            confirm  : document.getElementById("confirm").value,
+            loginConfirm(){
+                
+            console.log("login Confirm") 
+            }
+
+            }
+            console.log(user)
+            user.loginConfirm()
+            
+            
+
+        }
+
+    </script>
+    
+</body>
+</html>

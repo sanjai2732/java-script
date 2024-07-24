@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header id="header"></header>
+        <main>
+            <input type="text" id="text" placeholder="enter the number">
+        </main>
+        <button id="btn" onclick="find()"></button>
+        <div id="result">
+
+        </div>
+    </div>
+</body>
+
+<script>
+    let header=document.getElementById("header")
+    let btn=document.getElementById("btn")
+
+    header.innerHTML="length convertor"
+    btn.innerHTML="convert to inches"
+
+    function find(){
+        let text=Number(document.getElementById("text").value)
+        let result=document.getElementById("result")
+        result.innerHTML=text/2.5+" inch"
+    }
+    
+</script>
+</html>

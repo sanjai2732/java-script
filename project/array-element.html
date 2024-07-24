@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+        }
+        body{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+        .container{
+            height: 400px;
+            width: 200px;
+            padding: 10px;
+            text-align: center;
+            background-color: rgb(123, 0, 255);
+            border-radius: 10px;
+        
+        }
+        select,label{
+            margin-top: 70px;
+            padding: 5px 15px;
+            outline: none;
+            border-radius: 5px;
+        }
+        
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="department"> <h3>Select Department</h3></label><br>
+        <select name="education" id="education">
+            <option value="">ECE</option>
+        </select>
+    </div>
+
+
+    <script>
+        //arr=['ECE','CSE','IT','ECE','MECH','CIVIL']
+        //add the array element to a dropdown in html
+        function education(){
+            let select=document.getElementById('education')
+            let arr=['CSE','IT','ECE','MECH','CIVIL']
+        for(let i=0;i<=arr.length-1;i++){
+            let option=document.createElement("option")
+            option.value=arr[i]
+            option.innerText=arr[i]
+            select.append(option)
+        }
+}
+education()
+
+
+
+    </script>
+
+
+</body>
+</html>

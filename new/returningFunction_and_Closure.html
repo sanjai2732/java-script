@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //returning function and closure
+    function outer(){
+        let outVar="sanjai"
+        function inner(name){
+            let inVar="guru"
+            console.log(outVar,inVar,name)
+        }
+        return inner //return inner function
+    }
+    let o=outer() //return inner funtion store in 'o' variable
+    o("ram")  //call the inner funtion using o()
+    
+    // exaample 2
+
+    function add(x){
+        return function(y){
+            console.log(x+y)
+        }
+ }
+ let add100=add(100) //pass the value in add(x) Function store this value=100 "This called closure and returning funtion"
+ add100(20)// pass the value to return funtion "y"
+ add100(390)
+ let add20=add(20)
+ add20(20)
+
+ function ok(password){
+    return function(name){
+        if(name===password){
+            console.log('user name and password is same')
+        }
+        else{
+            console.log('welcome')
+      }
+    }
+ }
+ let name=ok("sanjai")
+ name("sanjai")
+ 
+ let name1=ok("Ram")
+ name("ram")
+
+</script>
+</html>

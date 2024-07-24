@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //API Application programming Interface
+       fetch("https://www.abibliadigital.com.br/api/verses/nvi/sl/23")
+       .then(resp=>console.log(resp.json()))
+       .then(meg=>{
+        console.log(meg.verses)
+       })
+    </script>
+</body>
+</html>

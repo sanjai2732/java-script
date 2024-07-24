@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            width: 100vw;
+            height: 100vh;
+            place-content: center;
+        }
+        #outer{
+            position: relative;
+            width: 200px;
+            height: 75px;
+            background-color:black;
+            border-radius:50px;
+            border: 5px solid red;
+            box-shadow: 0px 0px 5px black;
+            padding: 5px;
+            animation:outbox 1s 5 ease-out  ;
+        }
+        #inner{
+            position:absolute;
+            width: 70px;
+            height: 70px;
+            background-color: aliceblue;
+            border-radius: 50px;
+            right: 0;
+            margin: 5px 5px 5px 0px;
+            animation: box 1s 5 linear ;
+            
+        }
+        /* @keyframes box {
+          from{ right:0;
+          }
+          to{
+            left:0;
+            margin: 5px 0px 5px 5px
+          }
+    }
+    @keyframes outbox {
+        to{
+            border-color: yellow;
+            background-color: greenyellow;
+        }
+    } */
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner">
+        </div>
+    </div>
+    <script>
+        let input=document.getElementById("inner")
+        let input1=document.getElementById("outer")
+        input.addEventListener("click",()=>{
+            document.body.style.backgroundColor="black"
+            input.style.left="0"
+        
+            input.style.margin="5px 0px 5px 5px"
+
+            input1.style.backgroundColor="greenyellow"
+            input1.style.border="5px solid white"
+        })
+       
+    </script>
+</body>
+</html>

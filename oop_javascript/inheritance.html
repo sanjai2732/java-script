@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //base class ,parent class,super class
+        class User{
+            static userCount=0;
+            constructor(name){
+                this.n=name
+                User.userCount++
+            }
+            login(){
+                console.log("hi",this.n)
+            }
+            logout(){
+                console.log("Thank you!")
+            }
+            static displayTotelUser(){
+                console.log("Totel user:",User.userCount++)
+            }
+        }
+        let userOne=new User("sanjai") //user 1
+        userOne.login()
+        console.log("Totel user",User.userCount) //totel user 1
+        User.displayTotelUser()// static method calling
+
+        //inheritance  
+        //sub class ,child class
+        class PaidedUser extends User{  // inheritance means to acess the parent class useing "extends key word"
+        constructor(name){
+            super(name)
+        }
+            message(name){
+                console.log("50% discount",name)
+                return this
+            }
+            // Method overriding
+            logout(){
+                console.log("welcome back")
+                return this
+            }
+        }
+        let paidesUserOne=new PaidedUser("guru")
+        paidesUserOne.message()
+        // userOne.message()  TypeError , userOne not be acess the paidedUser but" paidedUser class acess the normal user class"
+        paidesUserOne.login()
+        paidesUserOne.logout()
+        let paidesUserSecond=new PaidedUser("MSD")
+        console.log(paidesUserSecond.n)
+
+        console.clear()
+        //method chaining
+        paidesUserOne.logout().message("sanjai")
+        console.clear()
+        // get and set
+        class Temperature{
+            constructor(temp){ //20
+                this._temp=temp; //private  , temp=20 to assign the "this._temp"
+            }
+            get temp(){         // get to get the "return value" use to modifing the value
+                return `${this._temp} deg `;
+            }
+            set temp(temp){ // set use to set the value same conditions are assign 
+                if(temp>100){
+                    temp=100
+                    this._temp=temp
+                }
+                else if(temp<100){
+                    temp=5
+                    this._temp=temp
+                }
+            }
+        }
+        let temp1=new Temperature(20)//assign 20 value the class Temperature
+        temp1.temp=101//first set the value set method the value 150 is > than 100 ,So 150 value change to "100" than ,get method will be modified into "100 deg"
+        console.log(temp1.temp)
+        temp1.temp=10//first set the value set method the value 150 is > than 100 ,So 150 value change to "100" than ,get method will be modified into "100 deg"
+        console.log(temp1.temp)
+
+    </script>
+</body>
+</html>

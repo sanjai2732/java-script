@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script >
+        // var a=1//var use to same variable name.
+        // var a=3
+        // let b=1
+        // const pi=300;
+        // function ok(){
+        //     // console.log(pi+1) const pi add the value but, not to be asign with another variable
+        //     // console.log(pi=a) it's a error 
+        //     let b=1
+        //     console.log(b) //but let is different in const you can use inside the you asign some variable
+        // }
+        // ok()
+        // let b=1; not use same variable name 
+        // console.log(a  +"1") // + convert string
+        // console.log(a + +"1")// double + + "add"
+        // console.log("1"+ + 2)//string
+        // console.log(+"1"+ + 2)//addtion
+        // console.log("Ave"<"zoo")//lowercase first , uppercase second
+        // console.log("++"/"++")//Not a number NaN
+        // console.log([2]>[1]) //true
+        // console.log(["abc"]>["abc"]) //false
+        // console.log(["abc"]>["Abc"]) //True
+        // console.log(undefined)//undefined
+        // console.log(undefined==0)//false
+        // console.log(undefined=0)//0
+        // console.log(null>0)//false
+        function find(){
+            console.log("step1")//2
+            setTimeout(()=>console.log("step2"),1000)//5
+            console.log("step5")//3
+        }
+        function timeOut(){setTimeout(()=>{
+            console.log("step4")//6
+        },1000)
+        
+    }
+        
+        async function asyncstatus(){
+            console.log("step3")//1
+            try{
+            const res=await timeOut()
+            find()
+            }
+            catch(e){
+                console.log(e)
+            }
+            console.log("step6")//4
+        }
+        asyncstatus()
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

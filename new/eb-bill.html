@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header id="header">Eb bill calculator</header>
+        <div>
+            <input type="text" id="input" placeholder="enter the unit">
+        </div>
+        <button id="btn" onclick="of()">calculate</button>
+        <div id="result">
+            
+        </div>
+    </div>
+
+    <script>
+        function of(){
+            let unit=Number(document.getElementById("input").value)
+            let result=document.getElementById("result")
+            let amount=0;
+            if(unit<=50){
+                amount=unit*0.75
+            }
+            else if(unit<=150){
+                amount=50*0.75+(unit-50)*1
+            }
+            else if(unit<=250){
+                amount=50*0.75+100*1+(unit-150)*1.30
+            }
+            else{
+                amount=50*0.75+ 100*1+ 100*1.30+(unit-250)*1.50
+            }
+
+        result.innerHTML="Rs: "+amount
+    }
+
+    </script>
+</body>
+</html>

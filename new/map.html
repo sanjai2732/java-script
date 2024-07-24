@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <script>
+        //map and forEach same but ,
+        //map will 'return array'.
+        //foreach not  return array.
+
+        //example
+
+       const priseUsd=[20,50,30]
+       let priseisd=priseUsd.map(x=>{
+        return x*83
+       
+    })
+    console.log(priseisd)
+    const op=[{name:'sanjai',age:27},
+              {name:'naren',age:20},
+              {name:'guru',age:40}]
+   let age= op.map(val=>{
+    return val.age
+   })
+
+   let count=0,i;
+   for(i=0;i<age.length;i++){
+   if(age[i]>=20 && age[i]<=30){
+       console.log("eigible",age[i])
+       count++
+   }
+   else{
+    console.log('not eigible',age[i])
+    count++
+   }
+   }
+   //-----------------------------------------------------
+   //filter array method
+   const no=[12,343,129,44,228]
+   const filter=no.filter(x=>x<100)
+   console.log(filter)
+
+   //reduce array method
+   let no1=[12,343,129,44,228]//totel is index start 12 , arrvalue upto end of array 12 to 228
+   let sum=no1.reduce((totel,arrvalue,index,arr)=>totel+arrvalue,1000)
+   console.log(sum)
+
+   //ex 1 reduce
+   let counter=[['a','b','c'], //two dimensional array
+                ['a','c','f'],
+                ['c','d','f']]
+    // console.log(counter.flat()) // flat covert to one dimensional array
+let result=counter.flat().reduce(
+    (accumumaltor,curval)=>{
+    if(accumumaltor[curval])
+        accumumaltor[curval]++
+    else
+        accumumaltor[curval]=1
+    return accumumaltor
+    
+
+},{})
+console.log(result)
+console.log(result.a,result.b)
+
+
+//map 
+let sa=[20,30,20]
+let a=sa.map(x=>x*20)
+console.log(a)
+//filter
+let fi=[20,1,30,20]
+let b=fi.filter(x=>x>10)//conditional only used
+console.log(b)
+//reduce
+let re=[20,204,59,20]
+let resl=re.reduce((totel,curval)=>totel+curval)
+console.log(resl)
+
+//exercise 1
+let numberArr=[4,6,2,3,1,1,3,5,7,8,4]//value is 4 to 4 ,index mean pressing 4 to 4 ,arr is full array value ,indexOf() function give the index value
+let un=numberArr.filter((value,index,arr)=>arr.indexOf(value)===index)
+console.log(un)
+console.log(numberArr.indexOf(6))
+//exercise 2
+let Name="Robert Andrew George"
+let str=Name.split(' ').map(x=>x[0]).join()
+console.log(str)
+//exercise 3
+let input=[6,-5,7,-2,4,6,-1]
+let inp =input.filter(x=>x>0)
+console.log(inp)
+
+       
+    </script>
+</body>
+</html>

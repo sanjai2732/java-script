@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //object 
+       let user1={
+        name:"sanjai",
+        age:22,
+        login(){
+            console.log("hi",this.name)//this indentified the original "Value"
+        },
+        logout(){
+            console.log(this.name,"logout")
+        }
+       }
+       user1.login()
+       user1.logout()
+       console.clear()
+       //---------------------------------
+
+
+
+       //Class is  a "templete", once's is  create used more time.
+       class User{
+        static usercount=0;
+        static logincount=0;
+        constructor(name,age){
+            this.name=name;
+            this.age=age;
+            User.usercount++
+        }
+        login(n){
+            console.log("hi",this.name,n)
+            User.logincount++
+            
+        }
+        logout(){
+            console.log(this.name,"logout")
+        }
+        static displayTotelUser(){ //static method
+            console.log("Totel user :",User.usercount++)
+        }
+       }
+
+       let User1=new User("sanjai",27)//count 1
+       let User2=new User("guru",22) //count 2
+       let User3=new User("guru",22) //count 3
+       User1.login(27)//logincount 1
+       User1.login(9)//logincount 2
+       console.log(User1.age)
+       console.log("number user:",User.usercount)// 3
+       console.log("number user:",User.logincount)//2
+       User.displayTotelUser()
+       //example
+       console.log(Math.sqrt(8)) //Math is a class name ,sqrt is static method "Math.sqrt()"
+       </script>
+</body>
+</html>

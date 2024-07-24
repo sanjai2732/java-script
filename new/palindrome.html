@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header id="header">palindrome</header>
+        <div>
+            <input type="text" id="input" placeholder="enter the word">
+        </div>
+        <button id="btn" onclick="of()">Find</button>
+        <div id="result">
+            
+        </div>
+    </div>
+
+    <script>
+        function of(){
+          let input=document.getElementById("input").value
+          let split=input.split('').reverse().join('')
+          let n='';
+          if(input===split){
+            n="palindrome"
+          }else{
+            n="not palindrome"
+          }
+          let result=document.getElementById("result")
+          result.innerHTML=n
+          
+        }
+     
+    </script>
+</body>
+</html>

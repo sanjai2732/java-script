@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[1,2,3,7,6]
+        let targert=5
+        //barte force
+        // for(i=0;i<arr.length;i++){
+        //     for(j=i+1;j<arr.length;j++){
+        //        if(arr[i]+arr[j]==targert){
+        //         console.log("index:",[i,j])
+        //        }
+        //     }
+        // }
+        //ex 2
+        let map=new Map()
+        for(i=0;i<arr.length;i++){//index of arr loop
+            let complement=targert-arr[i]//complement = 5-1 = 4
+            if(map.has(complement)){// map la already 4 irtha ture ilana flase
+                console.log("index:",map.get(complement),i)//
+            }
+            map.set(arr[i],i)// added in map arr[i] is arr value :1 and i is index of the arr value :0
+        }
+       
+    </script>
+</body>
+</html>

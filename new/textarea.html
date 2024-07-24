@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 350px;
+            background-color: aqua;
+            text-align: center;
+            height: 500px;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        textarea{
+            border-radius: 20px;
+            padding: 20px;
+
+        }
+        button{
+            margin-top: 10px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+        }
+        #result{
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        h3{
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Type a sentence</h3>
+        <textarea name="word" id="word" rows="15" cols="30"></textarea><br>
+        <button onclick="ok()">calculate Words</button>
+        <div id="result">   
+        </div>
+    </div>
+    <script>
+        function ok(){
+            let word=document.getElementById("word").value
+            let split=word.split(' ')
+            let totel=split.length
+            let result=document.getElementById("result")
+            result.innerHTML=totel+" words"
+        }
+    </script>
+
+</body>
+</html>

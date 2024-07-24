@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cm to inch converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3 id="heading">dropdown</h3>
+
+        <select name="selector" id="input">
+            <!-- <option value="sanjai">Sanjai</option>
+            <option value="ram">ram</option>
+            <option value="Guru">Guru</option> -->
+        </select>
+        
+        <div class="btn">
+            <button  type="submit" id="btn">find</button>
+        </div>
+    </div>
+
+    <script>
+        let arr=['ece','cse','it','meach','civil','sanjai']
+        let input=document.getElementById('input')
+        let i=0
+        for(i=0;i<arr.length;i++){
+            let option=document.createElement("option")
+            let app=input.appendChild(option)
+            app.value=arr[i]
+            app.innerHTML=arr[i]
+        }
+    </script>
+    
+</body>
+</html>

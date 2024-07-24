@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    //memory management
+    
+    //primitive type           reference type
+    /*
+    1. String                  1. Array
+    2. Number                  2.function
+    3. BigInt                  3.all Objects -Math,date
+    4. undefind
+    5. null
+    6. boolumn
+    7. Symbol
+    
+    */
+   let a=1020039403n // BigInt
+  console.log(a);
+
+
+   // Two type of memory location in java script 
+   /*
+   1.Stack  "one in last out"  - primitive type
+   2.heap                      - reference type
+   
+   */
+
+   //primitive data type store "stack memory location" onces the main value is change the value is not change
+   let a1=200
+   console.log(a1)
+   let b=a1
+   b=300   // value changed
+   console.log(b)
+
+   //reference data type : The value is store heap memory location but variable will store stack momery location variable point the value address ,it's act like "pointer".
+
+   let obj1={name:'sanjai',age:20}
+   console.log(obj1)
+   let odj2=obj1
+   obj1.name='ram'
+   console.log(odj2)
+   console.log(obj1)//both obj name are changed
+  
+
+</script>
+</html>

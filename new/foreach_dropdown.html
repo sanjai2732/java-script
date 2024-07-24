@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 200px;
+            height: 300px;
+            border-radius: 20px;
+            background-color: bisque;
+            display:grid;
+            place-items: center;
+            grid-template-rows: 0.3fr 0.5fr;
+        }
+        #input{
+            padding: 10px 50px;
+            border-radius: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <head>foreach dropdown</head><br>
+        <select name="" id="input">
+        </select>
+    </div>
+    <script>
+        //ex 1
+        // let arr=['sanjai','guru','naren','ram']
+        // arr.forEach(add)//callback function
+        // function add(val,index,arr){
+        //        let input=document.querySelector('select')
+        //        let create=document.createElement("option")
+        //        let op=input.appendChild(create)
+        //        op.innerHTML=val
+        // }
+        //ex 2 arrow function
+        let names =['sanjai','guru','naren','ram']
+        names.forEach(val=>{
+            const op=document.createElement('option')
+            op.textContent=val
+            op.value=val
+            document.getElementById('input').appendChild(op)
+        })
+
+        let input=[6,-5,7,-2,4,6,-1]
+        input.forEach(val=>{
+            let sum=0;
+            if(val>0){
+                console.log("positive number",sum+=val)
+            }
+            else{
+            //console.log("negative number",sum+=val)
+            
+            
+        }
+    }
+       
+    )
+    
+
+    </script>
+</body>
+
+</html>

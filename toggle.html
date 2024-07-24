@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            place-items: center;
+            width: 100vw;
+            height: 100vh;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+        }
+        
+        .box{
+            width: 100px;
+            background-color: aqua;
+            padding: 20px;
+            text-align: center;
+            margin: 10px;
+            transition: all 1s ease-in;
+        }
+        #box{
+            width: 30px;
+            height: 30px;
+            background-color: blue;
+            position:absolute;
+            top:3rem;
+            right: 3rem;
+        }
+        .boxHitte{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<div class="boxs">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+</div>
+<script>
+    document.getElementById("box").addEventListener("mouseenter",()=>{
+       const input= document.querySelectorAll(".box")
+       input.forEach((e)=>{
+        e.classList.add("boxHitte")
+       })
+    })
+    document.getElementById("box").addEventListener("mouseleave",()=>{
+       const input= document.querySelectorAll(".box")
+       input.forEach((e)=>{
+        e.classList.remove("boxHitte")
+       })
+    })
+</script>
+</body>
+
+</html>

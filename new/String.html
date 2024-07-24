@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<Script>
+    // String
+    let str1=" Welcome back to java Script       "
+    let str2="Hi,sanjai"
+    
+    console.log(str2+str1)
+    console.log(str2.concat(str1))
+    console.log(str2.concat("----",str1))
+    console.log((str2.replace("sanjai","guru")+str1.replace("java Script","Html and css")))
+    console.log(str1.slice(1,9))
+    console.log(str1.slice(-11))
+    console.log(str1.substring(1,9))//slice and subtring are same
+    console.log(str1.substr(5,10))// start,length
+    console.log(str1.toUpperCase())
+    console.log(str1.toLowerCase())
+    console.log(str1.length+str2.length)
+    console.log(str1.charAt(10))
+    let bill="Rs.10"
+    console.log(bill.padEnd(10,0))
+    console.log(bill.padStart(10,'qskw'))
+    //trim
+    console.log(str1.trim)
+    console.log(str1)
+    
+    console.log(str1[1])
+    console.log(str1.charAt(5))
+    
+    let ascii="a"
+    console.log(ascii.charCodeAt())//ascii value
+
+    console.log(str1.indexOf('S'))
+    console.log(str1.lastIndexOf('e'))
+    console.log(str1.search('java'))
+    console.log(str1.includes('not')) // trun boolean value
+    console.log(str1.toLocaleUpperCase())
+
+    //exercise 1 random letter getter
+    let name="sanjai"
+    let length=name.length
+    let math=Math.round((Math.random()*length))
+    console.log(name.charAt(math))
+
+    //exercise 2
+    let iteam=5
+    let billAmount=95
+
+    console.log(`You have ${iteam} in your cart.
+    Your bill amount is $${billAmount}.`)
+
+
+
+</Script>
+</html>

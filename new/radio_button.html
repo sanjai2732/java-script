@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header id="header">Radio button</header>
+        <div id="radio">
+            <input type="radio" name="eduction" value="Illiterate" ><span>Illiterate</span><br>
+            <input type="radio" name="eduction" value="HighSchool"><span>HighSchool</span><br>
+            <input type="radio" name="eduction" value="UG"><span>UG</span><br>
+            <input type="radio" name="eduction" value="PG"><span>PG</span><br>
+            <input type="radio" name="eduction" value="Doctorate"><span>Doctorate</span><br>
+        </div>
+        <button id="btn" onclick="of()">Find</button>
+        <div id="result">
+            
+        </div>
+    </div>
+
+    <script>
+        // `Eligible for job highSchool or UG only`
+        function of(){
+            let radio=document.querySelector('input[type="radio"]:checked').value
+            // console.log(radio)
+            //'input(type="radio"):checked'
+            let eligible=''
+            switch(radio){
+                case "Illiterate":
+                 eligible=`Not Eligible for job highSchool or UG only`
+                break
+                case "HighSchool":
+                 eligible=` Eligible for job highSchool or UG only`
+                break
+                case "UG":
+                 eligible=` Eligible for job highSchool or UG only`
+                break
+                case "PG":
+                 eligible=`Not Eligible for job highSchool or UG only`
+                break
+                case "Doctorate":
+                 eligible=`Not Eligible for job highSchool or UG only`
+                break
+            }
+            const result=document.getElementById('result')
+            result.innerHTML=eligible
+            
+        }
+
+    </script>
+</body>
+</html>

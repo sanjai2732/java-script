@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>function</h2>
+</body>
+<script>
+
+
+
+    //function
+    console.log( positiveNum(5)) // in this function call anywhere 
+
+    function positiveNum(n){//parameter
+        return n>=0; 
+    }
+   console.log( positiveNum(-5))//argument
+
+
+ //expresstion funtion
+// console.log(isadd(2,4))  in this not call
+
+   let isadd=function(a,b){
+    return a+b;
+   }
+   console.log(isadd(2,4))
+
+
+   //default parameters
+   function greet(name='there'){
+    console.log("hi",name)
+   }
+greet('ram')
+greet()
+
+//recursion - function callingmitself
+//factorial - product of first n number
+//5!=5*4*3*2*1
+
+function factorial(n){   //3                   2              1
+    if(n==1)             //3==1 No           2==1 No        1==1 yes
+    return 1
+return n*factorial(n-1) // 3*factorial(2)   6*factorial(1) 
+}
+console.log(factorial(3))//6
+
+
+
+//arrow function
+
+let volume=(l,b,h) => {return l*b*h}
+console.log(volume(5,2,1))
+
+//sum of the number
+
+let arr=[1,2,3,4,5,10]
+let arrsum=(arr) =>{
+    let sum=0
+    for(let val of arr){
+        sum+=val
+    }
+    return sum
+}
+console.log(arrsum(arr))
+
+//area of circle
+
+let area= r => Math.PI*r*r
+console.log(area(2))
+
+console.clear()
+
+//variable argument - rest parameter
+
+let prodect=function(...args){
+    let result=1
+    for(let val of args){
+        result*=val
+    }
+    return result
+}
+
+console.log(prodect(1,2,3,4))// give n number of argument
+
+//arguments 
+
+let prod=function(){
+    let result=1
+   // console.log(arguments)
+   for(let i=0;i<arguments.length;i++){
+    result*=arguments[i]
+   }
+   return result
+}
+console.log(prod(1,2,3,4))
+
+//generators - generates value one by one
+
+function* indexGenerator(){
+    let index = 1
+    while(true){
+        yield index++
+    }
+}
+
+const gen =indexGenerator();
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
+
+
+
+</script>
+
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <script>
+        let name="sAnjai Guru  "
+        console.log(name.slice(2,5))
+        console.log(name.slice(-1))//revers
+
+        console.log(name.substr(2,5))
+
+        console.log(name.indexOf("a"))
+        console.log(name.lastIndexOf("u"))
+
+        console.log(name.replace("Guru","S"))
+        
+        console.log(name.toUpperCase())
+        console.log(name.toLowerCase())
+
+
+        console.log(name.trim())
+        console.log(name.trimEnd())
+        console.log(name.trimStart())
+
+
+        let bill='Rs:10'
+
+        console.log(bill.length)
+
+        console.log(bill.padEnd(8,11))
+
+        console.log(name[10])
+        console.log(name.charAt(0))
+        console.log(name.charCodeAt(1))//ascii value
+
+        console.log(name.search('Guru'))
+        console.log(name.search('guru'))//not name give -1
+
+        console.log(name.includes('Guru'))// use ture or false
+        console.log(name.includes('guru'))
+
+        console.log(name.startsWith('s'))
+        console.log(name.endsWith('u'))
+
+        let val="Sanjai guru"
+        for(i=0;i<=10;i++){
+        let length=val.length
+        let ramdom=Math.round(Math.random()*length)
+        let char=val.charAt(ramdom)
+        console.log(char)
+        
+        }
+
+
+
+    </script>
+
+    
+</body>
+</html>

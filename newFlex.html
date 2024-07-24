@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            gap: 10px;
+
+        }
+        .container>*{
+            flex-basis: 100%; /*it give the equal space*/
+        }
+        
+        .item{
+            background-color: rgb(204, 204, 204);
+            border: 2px solid black;
+            padding: 15px;
+        }
+        /*------------------------------------------------------*/
+        .grid-ish{
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .grid-ish>*{
+            /* flex-basis:100%; */
+            flex:1 1 33%;
+            transition: all 1s ease;
+            
+        }
+        .grid-ish>*:hover{
+            /* flex: 1 1 100%; */
+            transition: all 1s ease;
+            /* flex-shrink:10 ; */
+            /* flex-basis: 10%; */
+            flex-grow: 100;
+        }
+        .grid{
+            background-color: rgb(255, 168, 168);
+            border: 2px solid black;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!--even colums-->
+    <!-- <div class="container even-columns">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatibus nostrum expedita eligendi quae rem incidunt nulla saepe sed ut!</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam fugiat explicabo ducimus ratione doloribus, illo maiores at placeat, eum porro, reiciendis consectetur? Saepe sit aut tempore ipsa obcaecati, cum dignissimos laudantium hic at eius consequatur modi eos alias perspiciatis. Eligendi dolorem architecto beatae laboriosam repellat aperiam quos reprehenderit. Delectus, assumenda?</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div> -->
+    <div class="grid-ish">
+        <div class="item grid">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatibus nostrum expedita eligendi quae rem incidunt nulla saepe sed ut!</div>
+        <div class="item grid">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam fugiat explicabo ducimus ratione doloribus, illo maiores at placeat, eum porro, reiciendis consectetur? Saepe sit aut tempore ipsa obcaecati, cum dignissimos laudantium hic at eius consequatur modi eos alias perspiciatis. Eligendi dolorem architecto beatae laboriosam repellat aperiam quos reprehenderit. Delectus, assumenda?</div>
+        <div class="item grid"></div>
+     
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header id="header">Fd rate Calculator</header>
+        <div>
+            <input type="text" id="input" placeholder="enter number of month">
+        </div>
+        <button id="btn" onclick="ok()">Convert</button>
+        <div id="result">
+            
+        </div>
+    </div>
+
+    <script>
+        function ok(){
+            const input=Number(document.getElementById("input").value)
+            let FdRates=0
+            if(input<3){
+                FdRates=5.8
+            }
+            else if(input>=3 && input<=6){
+                FdRates=6.5
+            }
+            else if(input>=7 && input<=9){
+                FdRates=6.8
+            }
+            else{
+                FdRates=7
+            }
+            let result=document.getElementById("result")
+            result.innerHTML=FdRates+"%"
+        }
+       
+    </script>
+</body>
+</html>

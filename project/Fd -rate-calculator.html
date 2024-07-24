@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3 id="heading">FD rate calculator</h3>
+        <input type="text" id="input" placeholder="enter the no.of months">
+        <div class="btn">
+            <button  type="submit" onclick="cal()">find</button>
+        </div>
+        <div id="result">
+        </div>
+    </div>
+
+    <script>
+        function cal(){
+          
+            const input=Number(document.getElementById("input").value)
+            let max=0
+            if(input<3){
+                max=2
+
+            }
+            else if(input>=3 && input <=6){
+                max=3.5
+            }
+            else if(input>=6 && input <=7){
+                max=4.5
+            }
+            else{
+                max=7
+            }
+           
+            let result=document.getElementById("result")
+            result.innerHTML = "your interest rate is " + max + " % "  
+        }
+    </script>
+
+</body>
+</html>

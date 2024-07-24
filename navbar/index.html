@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="sidebar">
+        <ul class="sideLink">
+            <li class="li"><a class="sideLink" href="#hero">Home</a></li>
+            <li class="li"><a class="sideLink" href="#about">About</a></li>
+            <li class="li"><a class="sideLink" href="#">Services</a></li>
+            <li class="li"><a class="sideLink" href="#">Contact</a></li>
+            <li class="li"><a class="sideLink" href="#">Blogs</a></li>
+        </ul>
+    </div>
+    <header>
+        <div id="logo">Sanjai.</div>
+        <nav >
+            <ul class="nav">
+                <li ><a href="#hero"class="nav">Home</a></li>
+                <li ><a href="#about"class="nav">About</a></li>
+                <li ><a href="#"class="nav">Services</a></li>
+                <li ><a href="#"class="nav">Contact</a></li>
+                <li ><a href="#"class="nav">Blogs</a></li>
+            </ul>  
+            <button id="login-btn">Login in</button>      
+            <button id="menu_icon" >+</button>      
+        </nav>
+    </header>
+    <div id="hero">
+        <div class="left-container">
+            <head>
+                <h2 id="welcome">Welcome</h2>
+                <h2 id="designs"><b>to</b>Fifillo designs</h2>
+                <p id="desription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, exercitationem. Unde et officia tempore optio exercitationem consequatur. Hic, est perferendis quod et aspernatur amet a dolor, voluptas neque ea nesciunt?
+                </p>
+            </head>
+            <div id="btn">
+                <button id="mainBtn">Get Started</button>
+                <button id="playBtn"><i><img src="CS_EDITZ_04.png" style="width: 20px; filter:saturate(10%); " alt=""></i> Play video</button>
+            </div>
+        </div>
+        <div class="rigth-container">
+            <div id="img_1"></div>
+            <div id="img_2"></div>
+        </div>
+        <div id="img_3">Lorem ipsum dolor sit amet.</div>
+    </div>
+</header>
+<div id="about" >
+    <div class="left-container">
+        <head>
+            <h2 id="welcome">Welcome</h2>
+            <h2 id="designs"><b>to</b>Fifillo designs</h2>
+            <p id="desription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, exercitationem. Unde et officia tempore optio exercitationem consequatur. Hic, est perferendis quod et aspernatur amet a dolor, voluptas neque ea nesciunt?
+            </p>
+        </head>
+        <div id="btn">
+            <button id="mainBtn">Get Started</button>
+            <button id="playBtn"><i><img src="CS_EDITZ_04.png" style="width: 20px; filter:saturate(10%); " alt=""></i> Play video</button>
+        </div>
+    </div>
+    <div class="rigth-container">
+        <div id="img_1"></div>
+        <div id="img_2"></div>
+    </div>
+    <div id="img_3">Lorem ipsum dolor sit amet.</div>
+</div>
+
+
+    <script>
+        document.getElementById("menu_icon").addEventListener("click",()=>{
+            document.querySelector(".sidebar").style.display="flex"
+        })
+        document.querySelector(".sidebar").addEventListener("click",()=>{
+            document.querySelector(".sidebar").style.display="none"
+        })
+        document.querySelector(".sidebar").addEventListener("mouseleave",()=>{
+            document.querySelector(".sidebar").style.display="none"
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paliindrome checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3 id="heading">Palindrome checker</h3>
+        <input type="text" id="input" placeholder="enter the word">
+        <div class="btn">
+            <button  type="submit" onclick="cal()">check</button>
+        </div>
+        <div id="result">
+        </div>
+    </div>
+
+
+    <script>
+        function cal(){
+            const input=document.getElementById("input").value
+            const trim=input.trim()
+            const split=trim.split("")
+            const re=split.reverse()
+            const join=re.join('')
+            let n='';
+            if(input==join){
+                n="palindrome"
+            }
+            else{
+                n="NOT palindrome"
+            }
+            const result=document.getElementById("result")
+            result.innerHTML=n
+            
+
+            
+        }
+
+    </script>
+</body>
+</html>

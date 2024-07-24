@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="colorfinder.js" defer></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        header{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            background-color: rgb(82, 165, 238);
+            justify-content: space-around;
+            align-items: center;
+            color: aliceblue;
+        }
+        #hexcode{
+            font-size: 30px;
+            color: black;
+        }
+        #container{
+            width:100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+        button{
+            padding: 20px 50px;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+        button:hover{
+            box-shadow: 0px 0px 10px rgb(82, 165, 238);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>color finder</h2>
+        <div id="hexcode">#ffffff</div>
+    </header>
+    <div id="container">
+        <button>click me</button>
+    </div>
+    
+</body>
+</html>

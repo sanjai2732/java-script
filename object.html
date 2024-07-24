@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        //object creation this way is used
+        let item={name:"sanjai",
+                  age:22,
+                  categories:[1,2,3,],//can be use array also
+                  edution:{           // can be create another object 
+                    highschool:"G.S",
+                    age:22,
+                    name:"sanjai",
+                  },
+                    buy(){
+                        console.log("hello") //this called method 
+                    },
+                    on(){
+                        console.log("hello")
+                    }
+                 
+                }
+        console.log(item)
+
+        //another way of object creation
+        let item1=new Object();
+        item1.name="sanjai"
+        item1.age=22
+        console.log(item1)
+
+        item.name="guru" //change the value
+        console.log(item)
+
+        item.eduction="UG" //added new property
+        console.log(item)
+
+        //square bracked notation
+        console.log(item['eduction'])
+        item['age']=30
+        console.log(item)
+
+        //function
+        item.buy()
+        item.on()
+        
+
+        
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

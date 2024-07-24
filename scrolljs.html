@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(13, 13, 32);
+            color: aliceblue;
+        }
+        h1{
+            font-size: 67px;
+            color: yellowgreen;
+            text-transform: capitalize;
+        }
+        h2{
+            font-size: 67px;
+            color: orange;
+            text-transform: capitalize;
+        }
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+        }
+        p{
+            font-size: 18px;
+            color: aqua;
+        }
+         .sec-2 .animate{
+            transform: translateX(-1000px);
+        }
+        .sec-2 .show-animate{
+            transform: translateX(0);
+        } 
+        
+    </style>
+</head>
+<body>
+    <section class="sec-1 show-animate" >
+        <h1 class="animate">Welcome back...</h1>
+        <p class="animate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, modi.</p>
+    </section>
+    <section class="sec-2">
+        <h2 class="animate" >Hello guys</h2> 
+        <p class="animate">Lorem ipsum dolor sit amet consectetur</p>
+    </section>
+    <section class="sec-3">
+        <h2 class="animate">Hello guys</h2> 
+        <p class="animate">Lorem ipsum dolor sit amet consectetur</p>
+    </section>
+    <section class="sec-4">
+        <h2 class="animate">Hello guys</h2> 
+        <p class="animate">Lorem ipsum dolor sit amet consectetur</p>
+    </section>
+    <script>
+        let section=document.querySelectorAll('section');
+        window.onscroll=()=>{
+            section.forEach(sec=>{
+                let top=window.scrollY;
+                // console.log(top)// 4: 7 ,11,15,22,24........2227
+                let offset=sec.offsetTop;
+                // console.log(offset) 0 734 1467 2201
+                let height=sec.offsetHeight;
+                // console.log(height) // 4: 734
+                if(top>=offset && top<offset+height){
+                    sec.classList.add('show-animate')
+                }
+                else{
+                    sec.classList.remove('show-animate')
+                }
+            })
+        }
+//         let sections = document.querySelectorAll('section');
+// window.onscroll = () => {
+//     sections.forEach(sec => {
+//         let top = window.scrollY;
+//         let offset = sec.offsetTop + 150;
+//         let height = sec.offsetHeight;
+
+//         if (top > offset && top < offset + height) {
+//             sec.classList.add('show-animate');
+//         } else {
+//             sec.classList.remove('show-animate');
+//         }
+//     });
+// };
+    </script>
+</body>
+
+</html>

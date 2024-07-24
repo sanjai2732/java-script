@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            display: flex;
+            width: 100vw;
+            height: 2rem;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: beige;
+        }
+        .nav_link{
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav_link li a{
+            display: inline-block;
+            margin-right: 2rem;
+        }
+        #lines{
+            width: 2rem;
+            height: 70%;
+            background-color: brown;
+            display: none;
+        }
+        @media  (max-width:800px) {
+            #lines{
+                display: block;
+            }
+            .nav_link{
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 3rem;
+            right: 0;
+            background-color: aqua;
+            width: 50%;
+            height: 100%;
+            place-items: center;
+        }
+        .nav_link li{
+            margin-top: 5rem;
+            width: 100%;
+            text-align: center;
+            list-style: none;
+        }
+        .nav_active{
+            display: flex;
+        }
+        }
+
+      
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="log">logo.</div>
+        <ul class="nav_link" id="navlink">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+        </ul>
+        <div id="lines">
+        </div>
+    </nav>
+    <!-- <button>click</button> -->
+</body>
+<script>
+    document.getElementById("lines").addEventListener("click",()=>{
+        document.getElementById("navlink").classList.toggle("nav_active")
+    })
+</script>
+</html>

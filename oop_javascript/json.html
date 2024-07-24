@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //JSON - javascript object notation
+        //This all are store in JSON
+        let json1=4
+        let json2=true
+        let json3="stock"
+        let json4=["sanjai","guru"]
+        let json5={
+            "stock":"hcl",//"" - double code is important on both key and value using in string
+            "price":200
+        }
+        let json6 = `[
+        {
+         "Stock":"hcl",
+          "Price":200
+        },
+        {
+         "Stock":"tcs",
+         "Price":30000
+        }
+         ]`
+console.log(json6)
+let parse=JSON.parse(json6)//it convert string to object
+console.log(parse[1].Stock,parse[1].Price)  
+console.log(parse[0])
+console.log(JSON.stringify(json5))// it convert object to string
+
+
+ </script>
+</body>
+</html>
